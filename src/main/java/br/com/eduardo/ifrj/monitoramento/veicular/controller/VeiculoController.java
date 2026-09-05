@@ -21,7 +21,17 @@ public class VeiculoController {
     @PostMapping("/bateria")
     public String receberTensaoBateria(@RequestBody TensaoBateria dados) {
 
-        System.out.println("Tensão da bateria: " + dados.getTensaoBateria() + " V");
+        System.out.println("===== DADOS DA BATERIA =====");
+
+        System.out.println("Tensão: " + dados.getTensao() + " V");
+        System.out.println("Voltagem: " + dados.getVoltagem() + " V");
+        System.out.println("Voltage: " + dados.getVoltage() + " V");
+        System.out.println("Valor: " + dados.getValor());
+        System.out.println("Dispositivo: " + dados.getDispositivo());
+        System.out.println("Timestamp: " + dados.getTimestamp());
+        System.out.println("Data/Hora: " + dados.getDataHora());
+
+        System.out.println("============================");
 
         return "Tensão da bateria recebida com sucesso!";
     }
