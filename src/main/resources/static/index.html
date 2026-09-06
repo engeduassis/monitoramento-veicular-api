@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento Veicular</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div>
+        <h1>Monitoramento Veicular</h1>
+        <p>Monitoramento em tempo real via OBD-II</p>
+    </div>
+
+    <div id="status-comunicacao"
+         class="status offline">
+
+        ● Offline
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="dashboard-grid">
+
+
+        <!-- TENSÃO -->
+
+        <div class="card">
+
+            <div class="card-title">
+                🔋 Tensão da bateria
+            </div>
+
+            <div class="valor-principal">
+
+                <span id="tensao">
+                    --.--
+                </span>
+
+                <span class="unidade">
+                    V
+                </span>
+
+            </div>
+
+            <div id="status-bateria"
+                 class="status-text">
+
+                Aguardando dados...
+
+            </div>
+
+        </div>
+
+
+        <!-- VEÍCULO -->
+
+        <div class="card">
+
+            <div class="card-title">
+                🚗 Veículo
+            </div>
+
+            <div class="veiculo-status">
+
+                <span id="status-veiculo"
+                      class="indicador offline">
+                </span>
+
+                <span id="texto-veiculo">
+                    Offline
+                </span>
+
+            </div>
+
+            <div class="sub-info">
+
+                Dispositivo:
+                <strong id="dispositivo">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ÚLTIMA ATUALIZAÇÃO -->
+
+        <div class="card">
+
+            <div class="card-title">
+                🕐 Última atualização
+            </div>
+
+            <div id="ultima-atualizacao"
+                 class="hora">
+
+                --
+
+            </div>
+
+            <div class="sub-info">
+
+                Atualização automática
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ÁREA FUTURA -->
+
+    <section class="card futuro">
+
+        <h2>Parâmetros do veículo</h2>
+
+        <p>
+            RPM, velocidade, temperatura do motor,
+            MAP e MAF serão adicionados nesta seção.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    Sistema de Monitoramento Veicular |
+    Spring Boot + OBD-II
+
+</footer>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

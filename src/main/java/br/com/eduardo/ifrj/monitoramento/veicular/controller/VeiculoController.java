@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/veiculos")
 public class VeiculoController {
 
+    private TensaoBateria ultimaTensaoBateria;
+
     @PostMapping("/dados")
     public String receberDados(@RequestBody DadosVeiculo dados) {
 
@@ -21,18 +23,21 @@ public class VeiculoController {
     @PostMapping("/bateria")
     public String receberTensaoBateria(@RequestBody TensaoBateria dados) {
 
-        System.out.println("===== DADOS DA BATERIA =====");
+        ultimaTensaoBateria = dados;
 
+        System.out.println("===== DADOS DA BATERIA =====");
         System.out.println("Tensão: " + dados.getTensao() + " V");
-        System.out.println("Voltagem: " + dados.getVoltagem() + " V");
-        System.out.println("Voltage: " + dados.getVoltage() + " V");
         System.out.println("Valor: " + dados.getValor());
         System.out.println("Dispositivo: " + dados.getDispositivo());
-        System.out.println("Timestamp: " + dados.getTimestamp());
         System.out.println("Data/Hora: " + dados.getDataHora());
-
         System.out.println("============================");
 
         return "Tensão da bateria recebida com sucesso!";
+    }
+
+    @GetMapping("/bateria")
+    public TensaoBateria consultarTensaoBateria() {
+
+        return ultimaTensaoBateria;
     }
 }

@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f1f3f6;
+
+    color: #202124;
+}
+
+
+header {
+
+    background: #1f2937;
+
+    color: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 26px;
+
+}
+
+
+header p {
+
+    margin: 5px 0 0;
+
+    color: #cbd5e1;
+
+}
+
+
+.status {
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.status.online {
+
+    background: #166534;
+
+}
+
+
+.status.offline {
+
+    background: #991b1b;
+
+}
+
+
+main {
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+}
+
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0,0,0,0.08);
+
+}
+
+
+.card-title {
+
+    font-size: 17px;
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+
+}
+
+
+.valor-principal {
+
+    font-size: 52px;
+
+    font-weight: bold;
+
+}
+
+
+.unidade {
+
+    font-size: 24px;
+
+    color: #64748b;
+
+}
+
+
+.status-text {
+
+    margin-top: 15px;
+
+    color: #64748b;
+
+}
+
+
+.veiculo-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+}
+
+
+.indicador {
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+}
+
+
+.indicador.online {
+
+    background: #16a34a;
+
+}
+
+
+.indicador.offline {
+
+    background: #dc2626;
+
+}
+
+
+.sub-info {
+
+    margin-top: 20px;
+
+    color: #64748b;
+
+}
+
+
+.hora {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+
+.futuro {
+
+    margin-top: 25px;
+
+}
+
+
+.futuro h2 {
+
+    margin-top: 0;
+
+}
+
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #64748b;
+
+}
+
+
+@media (max-width: 800px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
