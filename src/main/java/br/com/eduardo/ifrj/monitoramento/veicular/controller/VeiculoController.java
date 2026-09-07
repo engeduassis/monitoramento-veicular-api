@@ -10,9 +10,13 @@ public class VeiculoController {
 
     private TensaoBateria ultimaTensaoBateria;
 
+    @GetMapping("/teste")
+    public String teste() {
+        return "VeiculoController funcionando!";
+    }
+
     @PostMapping("/dados")
     public String receberDados(@RequestBody DadosVeiculo dados) {
-
         System.out.println("RPM: " + dados.getRpm());
         System.out.println("Velocidade: " + dados.getVelocidade());
         System.out.println("Temperatura: " + dados.getTemperaturaMotor());
@@ -37,7 +41,6 @@ public class VeiculoController {
 
     @GetMapping("/bateria")
     public TensaoBateria consultarTensaoBateria() {
-
         return ultimaTensaoBateria;
     }
 }
